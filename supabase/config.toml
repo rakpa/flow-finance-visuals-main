@@ -1,0 +1,11 @@
+
+[tables.currency_entries]
+id = { type = "uuid", primary = true }
+date = { type = "date", notNull = true }
+description = { type = "text", notNull = true }
+pln_amount = { type = "numeric", notNull = true }
+inr_amount = { type = "numeric", notNull = true }
+created_at = { type = "timestamp with time zone", default = "now()" }
+
+[tables.currency_entries.indexes]
+date_idx = { columns = ["date"] }
